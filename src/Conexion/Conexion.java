@@ -23,10 +23,8 @@ public class Conexion {
     // METODO -------------------------------------------------------------------
     public Connection Conectar() {
         Properties properties = new Properties();
-        File miDir = new File(".");
         try {
-            JOptionPane.showMessageDialog(null, miDir.getCanonicalPath());
-             properties.load(this.getClass().getClassLoader().getResourceAsStream("Conexion/Conexion.properties"));
+            properties.load(this.getClass().getClassLoader().getResourceAsStream("Conexion/Conexion.properties"));
             this.Servidor = properties.getProperty("Servidor");
             this.NombreBase = properties.getProperty("NombreBase");
             this.Usuario = properties.getProperty("Usuario");
