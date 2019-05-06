@@ -1,18 +1,12 @@
-
 package vistas;
 
 import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
 
-
 public class Principal extends javax.swing.JFrame {
 
     int x, y;
-
-    /**
-     * Creates new form Principal
-     */
 
     public Principal() {
         initComponents();
@@ -1000,7 +994,7 @@ public class Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
             }
         });
     }

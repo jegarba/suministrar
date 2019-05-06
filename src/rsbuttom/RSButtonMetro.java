@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rsbuttom;
 
-/**
- *
- * @author Rojeru San
- */
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -20,17 +11,15 @@ import java.awt.event.MouseMotionListener;
 import javax.swing.JButton;
 import javax.swing.border.Border;
 
-/**
-* @author Rojeru San
- */
 public class RSButtonMetro extends JButton implements MouseListener, MouseMotionListener {
+
     /**
      * Color para el fondo del boton
      */
     private Color colorNormal = new Color(0, 139, 139);
-    private Color colorPressed = new Color(0, 0, 0);   
+    private Color colorPressed = new Color(0, 0, 0);
     private Color colorHover = new Color(38, 86, 186);
-    
+
     private Border bordeMoved = javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(255, 255, 255));
     /**
      * Color para el texto
@@ -38,7 +27,7 @@ public class RSButtonMetro extends JButton implements MouseListener, MouseMotion
     private Color colorTextNormal = new Color(255, 255, 255);
     private Color colorTextPressed = new Color(255, 255, 255);
     private Color colorTextHover = new Color(255, 255, 255);
-    
+
     private Font f = new Font("Tahoma", Font.BOLD, 14);
 
     /**
@@ -70,6 +59,7 @@ public class RSButtonMetro extends JButton implements MouseListener, MouseMotion
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
     }
+
     public void mouseClicked(MouseEvent e) {
     }
 
@@ -84,7 +74,7 @@ public class RSButtonMetro extends JButton implements MouseListener, MouseMotion
     /**
      * Cuando se leventa el mouse del jbutton se retoman los colores originales
      */
-    public void mouseReleased(MouseEvent e) {       
+    public void mouseReleased(MouseEvent e) {
         this.setBackground(this.colorNormal);
         this.setForeground(this.colorTextNormal);
     }
@@ -136,7 +126,7 @@ public class RSButtonMetro extends JButton implements MouseListener, MouseMotion
 
     public void setColorNormal(Color colorNormal) {
         this.setBackground(colorNormal);
-        this.colorNormal = colorNormal;      
+        this.colorNormal = colorNormal;
     }
 
     public Color getColorTextNormal() {
@@ -147,7 +137,7 @@ public class RSButtonMetro extends JButton implements MouseListener, MouseMotion
         this.setForeground(colorTextNormal);
         this.colorTextNormal = colorTextNormal;
     }
-    
+
     public Border getColorBorde() {
         return bordeMoved;
     }
@@ -158,15 +148,15 @@ public class RSButtonMetro extends JButton implements MouseListener, MouseMotion
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        
+
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        
+
         this.setForeground(this.colorTextHover);
         this.setBackground(this.colorHover);
-        
+
         this.setBorder(bordeMoved);
     }
 }

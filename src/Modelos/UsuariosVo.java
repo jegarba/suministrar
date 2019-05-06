@@ -3,7 +3,7 @@ package Modelos;
 public class UsuariosVo {
 
     private String nombre, apellido, email;
-    private int cedula, telefono , rol;
+    private int cedula, telefono, rol;
 
     public UsuariosVo() {
     }
@@ -64,8 +64,6 @@ public class UsuariosVo {
     public void setRol(int rol) {
         this.rol = rol;
     }
-
-
 
     @Override
     public String toString() {

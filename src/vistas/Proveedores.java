@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vistas;
 
 import java.util.logging.Level;
@@ -11,16 +6,12 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-/**
- *
- * @author PC ACER OFICINA
- */
 public class Proveedores extends javax.swing.JFrame {
 
     /**
      * Creates new form Proveedores
      */
-    public Proveedores(){
+    public Proveedores() {
         initComponents();
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

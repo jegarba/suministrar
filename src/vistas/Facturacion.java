@@ -8,9 +8,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class Facturacion extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Articulos
-     */
     public Facturacion() {
         initComponents();
         try {
