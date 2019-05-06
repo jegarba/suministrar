@@ -69,7 +69,7 @@ public final class UsuariosController implements ActionListener {
         Vista.txttelefono.setEnabled(i);
     }
 
-    public void agregar(int codigo, String Nombre, String Apellido, long Cedula, String Email, long Telefono, int rol) {
+    public void AgregarUsuario(int codigo, String Nombre, String Apellido, long Cedula, String Email, long Telefono, int rol) {
         UsuariosVo po = new UsuariosVo();
         po.setCod(codigo);
         po.setNombre(Nombre);
@@ -79,6 +79,14 @@ public final class UsuariosController implements ActionListener {
         po.setTelefono(Telefono);
         po.setRol(rol);
         if (ModeloBo.Guardar(po)) {
+            JOptionPane.showMessageDialog(null, "Operacion Exitosa");
+        }
+    }
+
+    public void EliminarUsuario(long Cedula) {
+        UsuariosVo po = new UsuariosVo();
+        po.setCedula(Cedula);
+        if (ModeloBo.Eliminar(po)) {
             JOptionPane.showMessageDialog(null, "Operacion Exitosa");
         }
     }
@@ -104,7 +112,10 @@ public final class UsuariosController implements ActionListener {
                 System.out.println("buscar");
             }
         } else if (e.getSource() == Vista.btneliminar) {
-            System.out.println("eliminar");
+            long cedula = Long.parseLong(Vista.txtcedula.getText());
+            EliminarUsuario(cedula);
+            botones(false, false, false, false, false, false, false, false, false);
+            limpiar();
         } else if (e.getSource() == Vista.btnguardar) {
             String nombre = Vista.txtnombre.getText();
             String apellido = Vista.txtapellido.getText();
@@ -114,14 +125,14 @@ public final class UsuariosController implements ActionListener {
             UsuariosVo IdRol = (UsuariosVo) Vista.jComboBox1.getSelectedItem();
             sql s = new sql();
             int codigo = s.auto_increment("SELECT MAX(ID) FROM usuarios;");
-            agregar(codigo, nombre, apellido, cedula, email, telefono, IdRol.getRol()); //mando los datos al metodo guardar
+            AgregarUsuario(codigo, nombre, apellido, cedula, email, telefono, IdRol.getRol()); //mando los datos al metodo guardar
             limpiar();
             botones(false, false, false, false, false, false, false, false, false); //bloquear componentes
         } else if (e.getSource() == Vista.btnmodificar) {
             if (Vista.txtnombre.getText().isEmpty() || Vista.txtcedula.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Debe buscar el Usuario Para Poder Modificar Algun Dato");
             } else {
-                botones(false, true, true, true, true, true, true, true, true);
+                botones(false, true, true, true, true, false, true, true, true);
                 System.out.println("modificar");
             }
         } else if (e.getSource() == Vista.btnnuevo) {

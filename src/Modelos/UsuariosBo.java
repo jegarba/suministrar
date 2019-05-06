@@ -15,7 +15,7 @@ public class UsuariosBo {
 
     public boolean Guardar(UsuariosVo atributos) { //metodo vacio, no se puede estblecer la clausula boolean en el constructor
         try {
-            String sql = "CALL usuarios (1,'" + atributos.getCod()+ "','" + atributos.getNombre()+ "','" + atributos.getApellido()+ "','" + atributos.getCedula()+ "','" + atributos.getEmail()+ "','" + atributos.getTelefono()+ "','" + atributos.getRol()+ "','" + this.dateString + "');";
+            String sql = "CALL usuarios (1,'" + atributos.getCod() + "','" + atributos.getNombre() + "','" + atributos.getApellido() + "','" + atributos.getCedula() + "','" + atributos.getEmail() + "','" + atributos.getTelefono() + "','" + atributos.getRol() + "','" + this.dateString + "');";
             Statement Puente = C.Conectar().createStatement();
             Puente.executeUpdate(sql);
             return true;
@@ -39,7 +39,7 @@ public class UsuariosBo {
 
     public boolean Eliminar(UsuariosVo atributos) {
         try {
-            String sql = "CALL Productos (3,'" + atributos.getCedula()+ "',0,0,0,0,0,0,0); ";
+            String sql = "CALL usuarios (3,0,0,0,'" + atributos.getCedula() + "',0,0,0,0); ";
             Statement Puente = C.Conectar().createStatement();
             Puente.executeUpdate(sql);
             return true;
