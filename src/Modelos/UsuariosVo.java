@@ -3,18 +3,10 @@ package Modelos;
 public class UsuariosVo {
 
     private String nombre, apellido, email;
-    private int cedula, telefono, rol;
+    private int rol, cod;
+    long telefono, cedula;
 
     public UsuariosVo() {
-    }
-
-    public UsuariosVo(String nombre, String apellido, String email, int cedula, int telefono, int rol) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.cedula = cedula;
-        this.telefono = telefono;
-        this.rol = rol;
     }
 
     public String getNombre() {
@@ -41,22 +33,6 @@ public class UsuariosVo {
         this.email = email;
     }
 
-    public int getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(int cedula) {
-        this.cedula = cedula;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
     public int getRol() {
         return rol;
     }
@@ -64,6 +40,31 @@ public class UsuariosVo {
     public void setRol(int rol) {
         this.rol = rol;
     }
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void setCod(int cod) {
+        this.cod = cod;
+    }
+
+    public long getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(long telefono) {
+        this.telefono = telefono;
+    }
+
+    public long getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(long cedula) {
+        this.cedula = cedula;
+    }
+
 
     @Override
     public String toString() {
