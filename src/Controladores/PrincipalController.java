@@ -34,12 +34,12 @@ public final class PrincipalController implements ActionListener {
     Conexion C = new Conexion();
 
     public void botones(boolean a, boolean b, boolean c, boolean d, boolean e, boolean f) {
-        Vista.btnentradaproductos.setEnabled(a);
-        Vista.btnentradaproductos.setEnabled(b);
-        Vista.MenuFacturacion.setEnabled(c);
-        Vista.BtnHome.setEnabled(d);
-        Vista.MenuProveedores.setEnabled(e);
-        Vista.btnfacturaselectronicas.setEnabled(f);
+        Vista.MenuProveedores.setEnabled(a);
+        Vista.btnfacturaselectronicas.setEnabled(b);
+        Vista.BtnGestionUsuarios.setEnabled(c);
+        Vista.btnentradaproductos.setEnabled(d);
+        Vista.btngestionproductos.setEnabled(e);
+        Vista.MenuFacturacion.setEnabled(f);
     }
 
     public void properties(String Parametro) {
@@ -83,6 +83,19 @@ public final class PrincipalController implements ActionListener {
             Vista.lbluser.setText(po.getNombre());
             Vista.lblcedula.setText(po.getCedula());
             Vista.lblrol.setText(po.getRol());
+            switch (po.getRol()) {
+                case "1":
+                    botones(false, false, false, false, false, false);
+                    break;
+                case "2":
+                    botones(false, false, false, true, true, true);
+                    break;
+                case "3":
+                    botones(true, true, true, true, true, true);
+                    break;
+                default:
+                // code block
+            }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error, No Se Pudo Filtrar: " + e);
         }
@@ -91,22 +104,13 @@ public final class PrincipalController implements ActionListener {
     public PrincipalController(Principal Vista, PrincipalBo ModeloBo, String Valor) {
         this.Vista = Vista;
         this.ModeloBo = ModeloBo;
-        Vista.MenuFacturacion.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuFacturacionMouseClicked(evt);
-            }
-        });
-        Vista.MenuProveedores.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuProveedoresMouseClicked(evt);
-            }
-        });
+        this.Vista.MenuFacturacion.addActionListener(this);
+        this.Vista.MenuProveedores.addActionListener(this);
         this.Vista.btnentradaproductos.addActionListener(this);
         this.Vista.logout.addActionListener(this);
         this.Vista.btngestionproductos.addActionListener(this);
         this.Vista.BtnHome.addActionListener(this);
+        this.Vista.BtnGestionUsuarios.addActionListener(this);
         this.Vista.btnfacturaselectronicas.addActionListener(this);
         properties(Valor);
     }
@@ -114,39 +118,15 @@ public final class PrincipalController implements ActionListener {
     public PrincipalController(Principal Vista, PrincipalBo ModeloBo) {
         this.Vista = Vista;
         this.ModeloBo = ModeloBo;
-        Vista.MenuFacturacion.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuFacturacionMouseClicked(evt);
-            }
-        });
-        Vista.MenuProveedores.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuProveedoresMouseClicked(evt);
-            }
-        });
+        this.Vista.MenuFacturacion.addActionListener(this);
+        this.Vista.MenuProveedores.addActionListener(this);
         this.Vista.btnentradaproductos.addActionListener(this);
         this.Vista.logout.addActionListener(this);
         this.Vista.btngestionproductos.addActionListener(this);
+        this.Vista.BtnHome.addActionListener(this);
         this.Vista.BtnGestionUsuarios.addActionListener(this);
         this.Vista.btnfacturaselectronicas.addActionListener(this);
         properties();
-    }
-
-    private void MenuFacturacionMouseClicked(java.awt.event.MouseEvent evt) {
-        Vista.setVisible(false);
-        Facturacion VistaArticulo = new Facturacion();
-        VistaArticulo.setVisible(true);
-        new Facturacioncontroller(VistaArticulo);
-    }
-
-    private void MenuProveedoresMouseClicked(java.awt.event.MouseEvent evt) {
-        Vista.setVisible(false);
-        ProveedoresBo Modelo = new ProveedoresBo();
-        Proveedores VistaProveedor = new Proveedores();
-        VistaProveedor.setVisible(true);
-        new ProveedoresController(Modelo, VistaProveedor);
     }
 
     @Override
@@ -190,8 +170,32 @@ public final class PrincipalController implements ActionListener {
             Pdf Vistapdf = new Pdf();
             Vistapdf.setVisible(true);
             new PdfController(Modelopdf, Vistapdf);
-
+        } else if (e.getSource() == Vista.MenuFacturacion) {
+            Vista.dispose();
+            Facturacion VistaArticulo = new Facturacion();
+            VistaArticulo.setVisible(true);
+            new Facturacioncontroller(VistaArticulo);
+        } else if (e.getSource() == Vista.MenuProveedores) {
+            Vista.dispose();
+            ProveedoresBo Modelo = new ProveedoresBo();
+            Proveedores VistaProveedor = new Proveedores();
+            VistaProveedor.setVisible(true);
+            new ProveedoresController(Modelo, VistaProveedor);
         }
     }
-
+//
+//    private void MenuFacturacionMouseClicked(java.awt.event.MouseEvent evt) {
+//        Vista.dispose();
+//        Facturacion VistaArticulo = new Facturacion();
+//        VistaArticulo.setVisible(true);
+//        new Facturacioncontroller(VistaArticulo);
+//    }
+//
+//    private void MenuProveedoresMouseClicked(java.awt.event.MouseEvent evt) {
+//        Vista.dispose();
+//        ProveedoresBo Modelo = new ProveedoresBo();
+//        Proveedores VistaProveedor = new Proveedores();
+//        VistaProveedor.setVisible(true);
+//        new ProveedoresController(Modelo, VistaProveedor);
+//    }
 }
