@@ -69,10 +69,10 @@
                   <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="BtnGestionUsuarios" min="-2" pref="258" max="-2" attributes="0"/>
+                          <Component id="BtnHome" min="-2" pref="258" max="-2" attributes="0"/>
                           <Component id="MenuProveedores" min="-2" pref="258" max="-2" attributes="0"/>
                           <Component id="btnfacturaselectronicas" min="-2" pref="258" max="-2" attributes="0"/>
-                          <Component id="cuatro" min="-2" pref="258" max="-2" attributes="0"/>
+                          <Component id="BtnGestionUsuarios" min="-2" pref="258" max="-2" attributes="0"/>
                           <Component id="cinco" min="-2" pref="258" max="-2" attributes="0"/>
                           <Component id="btnentradaproductos" min="-2" pref="258" max="-2" attributes="0"/>
                           <Component id="btngestionproductos" min="-2" pref="258" max="-2" attributes="0"/>
@@ -87,13 +87,13 @@
                   <Group type="102" attributes="0">
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="BtnGestionUsuarios" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="BtnHome" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="MenuProveedores" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="btnfacturaselectronicas" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="cuatro" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="BtnGestionUsuarios" min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
@@ -112,15 +112,15 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="rsbuttom.RSButtonMetro" name="BtnGestionUsuarios">
+            <Component class="rsbuttom.RSButtonMetro" name="BtnHome">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="83" green="80" red="80" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Resources/value.png"/>
+                  <Image iconType="3" name="/Resources/home.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Gestion Usuarios"/>
+                <Property name="text" type="java.lang.String" value="HOME"/>
                 <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
@@ -144,8 +144,8 @@
                 <Property name="iconTextGap" type="int" value="25"/>
               </Properties>
               <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BtnGestionUsuariosMousePressed"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnGestionUsuariosActionPerformed"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BtnHomeMousePressed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnHomeActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -201,7 +201,7 @@
                   <Color blue="83" green="80" red="80" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Resources/home.png"/>
+                  <Image iconType="3" name="/Resources/bill.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gestion facturas Electronicas"/>
                 <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -485,7 +485,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="rsbuttom.RSButtonMetro" name="cuatro">
+            <Component class="rsbuttom.RSButtonMetro" name="BtnGestionUsuarios">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f4" green="ee" red="ef" type="rgb"/>
@@ -494,9 +494,9 @@
                   <Color blue="83" green="80" red="80" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Resources/home.png"/>
+                  <Image iconType="3" name="/Resources/value.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="..."/>
+                <Property name="text" type="java.lang.String" value="Gestion Usuarios"/>
                 <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
@@ -520,8 +520,8 @@
                 <Property name="iconTextGap" type="int" value="19"/>
               </Properties>
               <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cuatroMousePressed"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cuatroActionPerformed"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BtnGestionUsuariosMousePressed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnGestionUsuariosActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

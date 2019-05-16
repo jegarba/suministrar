@@ -9,6 +9,7 @@ import Modelos.ProveedoresBo;
 import Modelos.UsuariosBo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -32,48 +33,39 @@ public final class PrincipalController implements ActionListener {
     PrincipalBo ModeloBo;
     Conexion C = new Conexion();
 
-    public void botones() {
-        Vista.MenuFacturacion.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuFacturacionMouseClicked(evt);
-            }
-        });
-        Vista.MenuProveedores.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuProveedoresMouseClicked(evt);
-            }
-        });
-        this.Vista.btnentradaproductos.addActionListener(this);
-        this.Vista.logout.addActionListener(this);
-        this.Vista.btngestionproductos.addActionListener(this);
-        this.Vista.BtnGestionUsuarios.addActionListener(this);
-        this.Vista.btnfacturaselectronicas.addActionListener(this);
+    public void botones(boolean a, boolean b, boolean c, boolean d, boolean e, boolean f) {
+        Vista.btnentradaproductos.setEnabled(a);
+        Vista.btnentradaproductos.setEnabled(b);
+        Vista.MenuFacturacion.setEnabled(c);
+        Vista.BtnHome.setEnabled(d);
+        Vista.MenuProveedores.setEnabled(e);
+        Vista.btnfacturaselectronicas.setEnabled(f);
     }
+
     public void properties(String Parametro) {
         Properties prop = new Properties();
         try {
-            prop.load(this.getClass().getClassLoader().getResourceAsStream("./Conexion/Datos.properties"));
+            prop.load(new FileInputStream("conf/Datos.properties"));
             prop.setProperty("Usuario", Parametro);
-            prop.store(new FileWriter("src/Conexion/Datos.properties"),"Usuario Logueado");
+            prop.store(new FileWriter("conf/Datos.properties"), "Usuario Logueado");
             Filtrar(prop.getProperty("Usuario"));
         } catch (IOException e) {
             System.out.println("No Se Pudo Cargar El Archivo De Configuracion...!!!" + e);
         }
-        
+
     }
+
     public void properties() {
         Properties prop = new Properties();
         try {
-            prop.load(this.getClass().getClassLoader().getResourceAsStream("./Conexion/Datos.properties"));
+            prop.load(new FileInputStream("conf/Datos.properties"));
             String Usuario3 = prop.getProperty("Usuario");
-            prop.store(new FileWriter("src/Conexion/Datos.properties"),"Usuario Rertonado");
+            prop.store(new FileWriter("conf/Datos.properties"), "Usuario Rertonado");
             Filtrar(Usuario3);
         } catch (IOException e) {
             System.out.println("No Se Pudo Cargar El Archivo De Configuracion...!!!" + e);
         }
-        
+
     }
 
     public void Filtrar(String Prope) {
@@ -96,18 +88,52 @@ public final class PrincipalController implements ActionListener {
         }
     }
 
-    public PrincipalController(Principal Vista, PrincipalBo ModeloBo , String Valor) {
+    public PrincipalController(Principal Vista, PrincipalBo ModeloBo, String Valor) {
         this.Vista = Vista;
         this.ModeloBo = ModeloBo;
-        botones();
+        Vista.MenuFacturacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuFacturacionMouseClicked(evt);
+            }
+        });
+        Vista.MenuProveedores.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuProveedoresMouseClicked(evt);
+            }
+        });
+        this.Vista.btnentradaproductos.addActionListener(this);
+        this.Vista.logout.addActionListener(this);
+        this.Vista.btngestionproductos.addActionListener(this);
+        this.Vista.BtnHome.addActionListener(this);
+        this.Vista.btnfacturaselectronicas.addActionListener(this);
         properties(Valor);
     }
+
     public PrincipalController(Principal Vista, PrincipalBo ModeloBo) {
         this.Vista = Vista;
         this.ModeloBo = ModeloBo;
-        botones();
+        Vista.MenuFacturacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuFacturacionMouseClicked(evt);
+            }
+        });
+        Vista.MenuProveedores.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuProveedoresMouseClicked(evt);
+            }
+        });
+        this.Vista.btnentradaproductos.addActionListener(this);
+        this.Vista.logout.addActionListener(this);
+        this.Vista.btngestionproductos.addActionListener(this);
+        this.Vista.BtnGestionUsuarios.addActionListener(this);
+        this.Vista.btnfacturaselectronicas.addActionListener(this);
         properties();
     }
+
     private void MenuFacturacionMouseClicked(java.awt.event.MouseEvent evt) {
         Vista.setVisible(false);
         Facturacion VistaArticulo = new Facturacion();
@@ -141,11 +167,10 @@ public final class PrincipalController implements ActionListener {
             if (ModeloBo.Actulizar(atributos)) {
                 JOptionPane.showMessageDialog(null, "DesLogeado Corectamente");
                 Properties properties = new Properties();
-
                 try {
-                    properties.load(this.getClass().getClassLoader().getResourceAsStream("./Conexion/Datos.properties"));
+                    properties.load(new FileInputStream("conf/Datos.properties"));
                     properties.setProperty("Usuario", "Default");
-                    properties.store(new FileWriter("src/Conexion/Datos.properties"), "Usuario DesLogueado");
+                    properties.store(new FileWriter("conf/Datos.properties"), "Usuario DesLogueado");
                 } catch (IOException ex) {
                     Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
                 }

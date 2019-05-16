@@ -24,7 +24,7 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         pnlMenu = new javax.swing.JPanel();
-        BtnGestionUsuarios = new rsbuttom.RSButtonMetro();
+        BtnHome = new rsbuttom.RSButtonMetro();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnfacturaselectronicas = new rsbuttom.RSButtonMetro();
@@ -35,7 +35,7 @@ public class Principal extends javax.swing.JFrame {
         MenuFacturacion = new rsbuttom.RSButtonMetro();
         btngestionproductos = new rsbuttom.RSButtonMetro();
         btnentradaproductos = new rsbuttom.RSButtonMetro();
-        cuatro = new rsbuttom.RSButtonMetro();
+        BtnGestionUsuarios = new rsbuttom.RSButtonMetro();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -63,26 +63,26 @@ public class Principal extends javax.swing.JFrame {
         pnlMenu.setBackground(new java.awt.Color(239, 238, 244));
         pnlMenu.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 0, 0, new java.awt.Color(239, 238, 244)));
 
-        BtnGestionUsuarios.setForeground(new java.awt.Color(128, 128, 131));
-        BtnGestionUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/value.png"))); // NOI18N
-        BtnGestionUsuarios.setText("Gestion Usuarios");
-        BtnGestionUsuarios.setColorHover(new java.awt.Color(204, 204, 204));
-        BtnGestionUsuarios.setColorNormal(new java.awt.Color(204, 204, 204));
-        BtnGestionUsuarios.setColorPressed(new java.awt.Color(204, 204, 204));
-        BtnGestionUsuarios.setColorTextHover(new java.awt.Color(128, 128, 131));
-        BtnGestionUsuarios.setColorTextNormal(new java.awt.Color(128, 128, 131));
-        BtnGestionUsuarios.setColorTextPressed(new java.awt.Color(128, 128, 131));
-        BtnGestionUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        BtnGestionUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        BtnGestionUsuarios.setIconTextGap(25);
-        BtnGestionUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnHome.setForeground(new java.awt.Color(128, 128, 131));
+        BtnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/home.png"))); // NOI18N
+        BtnHome.setText("HOME");
+        BtnHome.setColorHover(new java.awt.Color(204, 204, 204));
+        BtnHome.setColorNormal(new java.awt.Color(204, 204, 204));
+        BtnHome.setColorPressed(new java.awt.Color(204, 204, 204));
+        BtnHome.setColorTextHover(new java.awt.Color(128, 128, 131));
+        BtnHome.setColorTextNormal(new java.awt.Color(128, 128, 131));
+        BtnHome.setColorTextPressed(new java.awt.Color(128, 128, 131));
+        BtnHome.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BtnHome.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        BtnHome.setIconTextGap(25);
+        BtnHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                BtnGestionUsuariosMousePressed(evt);
+                BtnHomeMousePressed(evt);
             }
         });
-        BtnGestionUsuarios.addActionListener(new java.awt.event.ActionListener() {
+        BtnHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnGestionUsuariosActionPerformed(evt);
+                BtnHomeActionPerformed(evt);
             }
         });
 
@@ -111,7 +111,7 @@ public class Principal extends javax.swing.JFrame {
 
         btnfacturaselectronicas.setBackground(new java.awt.Color(239, 238, 244));
         btnfacturaselectronicas.setForeground(new java.awt.Color(128, 128, 131));
-        btnfacturaselectronicas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/home.png"))); // NOI18N
+        btnfacturaselectronicas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/bill.png"))); // NOI18N
         btnfacturaselectronicas.setText("Gestion facturas Electronicas");
         btnfacturaselectronicas.setColorHover(new java.awt.Color(204, 204, 204));
         btnfacturaselectronicas.setColorNormal(new java.awt.Color(239, 238, 244));
@@ -276,27 +276,27 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        cuatro.setBackground(new java.awt.Color(239, 238, 244));
-        cuatro.setForeground(new java.awt.Color(128, 128, 131));
-        cuatro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/home.png"))); // NOI18N
-        cuatro.setText("...");
-        cuatro.setColorHover(new java.awt.Color(204, 204, 204));
-        cuatro.setColorNormal(new java.awt.Color(239, 238, 244));
-        cuatro.setColorPressed(new java.awt.Color(204, 204, 204));
-        cuatro.setColorTextHover(new java.awt.Color(128, 128, 131));
-        cuatro.setColorTextNormal(new java.awt.Color(128, 128, 131));
-        cuatro.setColorTextPressed(new java.awt.Color(128, 128, 131));
-        cuatro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        cuatro.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        cuatro.setIconTextGap(19);
-        cuatro.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnGestionUsuarios.setBackground(new java.awt.Color(239, 238, 244));
+        BtnGestionUsuarios.setForeground(new java.awt.Color(128, 128, 131));
+        BtnGestionUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/value.png"))); // NOI18N
+        BtnGestionUsuarios.setText("Gestion Usuarios");
+        BtnGestionUsuarios.setColorHover(new java.awt.Color(204, 204, 204));
+        BtnGestionUsuarios.setColorNormal(new java.awt.Color(239, 238, 244));
+        BtnGestionUsuarios.setColorPressed(new java.awt.Color(204, 204, 204));
+        BtnGestionUsuarios.setColorTextHover(new java.awt.Color(128, 128, 131));
+        BtnGestionUsuarios.setColorTextNormal(new java.awt.Color(128, 128, 131));
+        BtnGestionUsuarios.setColorTextPressed(new java.awt.Color(128, 128, 131));
+        BtnGestionUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BtnGestionUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        BtnGestionUsuarios.setIconTextGap(19);
+        BtnGestionUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                cuatroMousePressed(evt);
+                BtnGestionUsuariosMousePressed(evt);
             }
         });
-        cuatro.addActionListener(new java.awt.event.ActionListener() {
+        BtnGestionUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cuatroActionPerformed(evt);
+                BtnGestionUsuariosActionPerformed(evt);
             }
         });
 
@@ -308,10 +308,10 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlMenuLayout.createSequentialGroup()
                 .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnGestionUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MenuProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnfacturaselectronicas, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnGestionUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnentradaproductos, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btngestionproductos, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -323,13 +323,13 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(pnlMenuLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(BtnGestionUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(MenuProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnfacturaselectronicas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnGestionUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlMenuLayout.createSequentialGroup()
                         .addGap(44, 44, 44)
@@ -539,11 +539,11 @@ public class Principal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnGestionUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGestionUsuariosActionPerformed
-        if (this.BtnGestionUsuarios.isSelected()) {
-            this.BtnGestionUsuarios.setColorNormal(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+    private void BtnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHomeActionPerformed
+        if (this.BtnHome.isSelected()) {
+            this.BtnHome.setColorNormal(new Color(204, 204, 204));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
@@ -553,9 +553,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -573,22 +573,22 @@ public class Principal extends javax.swing.JFrame {
             this.MenuFacturacion.setColorHover(new Color(204, 204, 204));
             this.MenuFacturacion.setColorPressed(new Color(204, 204, 204));
         } else {
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
         }
-    }//GEN-LAST:event_BtnGestionUsuariosActionPerformed
+    }//GEN-LAST:event_BtnHomeActionPerformed
 
-    private void BtnGestionUsuariosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGestionUsuariosMousePressed
-        this.BtnGestionUsuarios.setSelected(true);
+    private void BtnHomeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeMousePressed
+        this.BtnHome.setSelected(true);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(false);
         this.MenuFacturacion.setSelected(false);
-    }//GEN-LAST:event_BtnGestionUsuariosMousePressed
+    }//GEN-LAST:event_BtnHomeMousePressed
 
     private void btnfacturaselectronicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfacturaselectronicasActionPerformed
         if (this.btnfacturaselectronicas.isSelected()) {
@@ -596,17 +596,17 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
             this.MenuProveedores.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -631,10 +631,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnfacturaselectronicasActionPerformed
 
     private void btnfacturaselectronicasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnfacturaselectronicasMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(true);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(false);
@@ -642,10 +642,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnfacturaselectronicasMousePressed
 
     private void MenuProveedoresMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuProveedoresMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(true);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(false);
@@ -658,17 +658,17 @@ public class Principal extends javax.swing.JFrame {
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
             this.MenuProveedores.setColorPressed(new Color(204, 204, 204));
 
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.btnfacturaselectronicas.setColorNormal(new Color(239, 238, 244));
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -702,10 +702,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void MenuFacturacionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuFacturacionMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(false);
@@ -714,9 +714,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void MenuFacturacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuFacturacionActionPerformed
         if (this.MenuFacturacion.isSelected()) {
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
@@ -726,9 +726,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -753,10 +753,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuFacturacionActionPerformed
 
     private void btngestionproductosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btngestionproductosMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(true);
@@ -765,9 +765,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void btngestionproductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngestionproductosActionPerformed
         if (this.btngestionproductos.isSelected()) {
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
@@ -777,9 +777,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -804,10 +804,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btngestionproductosActionPerformed
 
     private void btnentradaproductosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnentradaproductosMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(true);
         this.btngestionproductos.setSelected(false);
@@ -816,9 +816,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnentradaproductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnentradaproductosActionPerformed
         if (this.btnentradaproductos.isSelected()) {
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
@@ -828,9 +828,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -856,9 +856,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
         if (this.cinco.isSelected()) {
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
@@ -868,9 +868,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(204, 204, 204));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -895,32 +895,32 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cincoActionPerformed
 
     private void cincoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cincoMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(false);
+        this.BtnGestionUsuarios.setSelected(false);
         this.cinco.setSelected(true);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(false);
         this.MenuFacturacion.setSelected(false);
     }//GEN-LAST:event_cincoMousePressed
 
-    private void cuatroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cuatroMousePressed
-        this.BtnGestionUsuarios.setSelected(false);
+    private void BtnGestionUsuariosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGestionUsuariosMousePressed
+        this.BtnHome.setSelected(false);
         this.MenuProveedores.setSelected(false);
         this.btnfacturaselectronicas.setSelected(false);
-        this.cuatro.setSelected(true);
+        this.BtnGestionUsuarios.setSelected(true);
         this.cinco.setSelected(false);
         this.btnentradaproductos.setSelected(false);
         this.btngestionproductos.setSelected(false);
         this.MenuFacturacion.setSelected(false);
-    }//GEN-LAST:event_cuatroMousePressed
+    }//GEN-LAST:event_BtnGestionUsuariosMousePressed
 
-    private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
-        if (this.cuatro.isSelected()) {
-            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
-            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
-            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
+    private void BtnGestionUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGestionUsuariosActionPerformed
+        if (this.BtnGestionUsuarios.isSelected()) {
+            this.BtnHome.setColorNormal(new Color(239, 238, 244));
+            this.BtnHome.setColorHover(new Color(204, 204, 204));
+            this.BtnHome.setColorPressed(new Color(204, 204, 204));
 
             this.MenuProveedores.setColorNormal(new Color(239, 238, 244));
             this.MenuProveedores.setColorHover(new Color(204, 204, 204));
@@ -930,9 +930,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnfacturaselectronicas.setColorHover(new Color(204, 204, 204));
             this.btnfacturaselectronicas.setColorPressed(new Color(204, 204, 204));
 
-            this.cuatro.setColorNormal(new Color(204, 204, 204));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
 
             this.cinco.setColorNormal(new Color(239, 238, 244));
             this.cinco.setColorHover(new Color(204, 204, 204));
@@ -950,11 +950,11 @@ public class Principal extends javax.swing.JFrame {
             this.MenuFacturacion.setColorHover(new Color(204, 204, 204));
             this.MenuFacturacion.setColorPressed(new Color(204, 204, 204));
         } else {
-            this.cuatro.setColorNormal(new Color(239, 238, 244));
-            this.cuatro.setColorHover(new Color(204, 204, 204));
-            this.cuatro.setColorPressed(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorNormal(new Color(239, 238, 244));
+            this.BtnGestionUsuarios.setColorHover(new Color(204, 204, 204));
+            this.BtnGestionUsuarios.setColorPressed(new Color(204, 204, 204));
         }
-    }//GEN-LAST:event_cuatroActionPerformed
+    }//GEN-LAST:event_BtnGestionUsuariosActionPerformed
 
     private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
         x = evt.getX();
@@ -1001,13 +1001,13 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public rsbuttom.RSButtonMetro BtnGestionUsuarios;
+    public rsbuttom.RSButtonMetro BtnHome;
     public rsbuttom.RSButtonMetro MenuFacturacion;
     public rsbuttom.RSButtonMetro MenuProveedores;
     public rsbuttom.RSButtonMetro btnentradaproductos;
     public rsbuttom.RSButtonMetro btnfacturaselectronicas;
     public rsbuttom.RSButtonMetro btngestionproductos;
     public rsbuttom.RSButtonMetro cinco;
-    public rsbuttom.RSButtonMetro cuatro;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

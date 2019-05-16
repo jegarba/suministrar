@@ -1,5 +1,6 @@
 package Conexion;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,16 +14,12 @@ public class Conexion {
     private String Servidor, NombreBase, Usuario, Password;
     private static Connection Con;
 
-    //metodo verifica properties
-    public void properties() {
-
-    }
-
     // METODO -------------------------------------------------------------------
     public Connection Conectar() {
         Properties properties = new Properties();
         try {
-            properties.load(this.getClass().getClassLoader().getResourceAsStream("Conexion/Conexion.properties"));
+            properties.load(new FileInputStream("conf/Conexion.properties")); //cargar archivo desde fuera del .jar
+            //properties.load(this.getClass().getClassLoader().getResourceAsStream("Conexion/Conexion.properties")); //sirve para cargar el archivo si esta dentro del paquete
             this.Servidor = properties.getProperty("Servidor");
             this.NombreBase = properties.getProperty("NombreBase");
             this.Usuario = properties.getProperty("Usuario");
