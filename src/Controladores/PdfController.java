@@ -4,6 +4,7 @@ import Conexion.Conexion;
 import Conexion.sql;
 import Modelos.PdfBo;
 import Modelos.PdfVo;
+import Modelos.PrincipalBo;
 import vistas.Pdf;
 import java.awt.Desktop;
 import java.awt.Image;
@@ -29,6 +30,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import vistas.Principal;
 
 public final class PdfController implements ActionListener {
 
@@ -51,6 +53,7 @@ public final class PdfController implements ActionListener {
         this.Vista.btneliminar.addActionListener(this);
         this.Vista.btncancelar.addActionListener(this);
         this.Vista.btnmodificar.addActionListener(this);
+        this.Vista.btnback.addActionListener(this);
 
         activa_boton(false, false, false);
         bloquearcampos(false, false, false, false, false, false);
@@ -373,6 +376,12 @@ public final class PdfController implements ActionListener {
             ruta_archivo = "";
             activa_boton(false, false, false);
             bloquearcampos(false, false, false, false, false, false);
+        } else if (e.getSource() == Vista.btnback) {
+            Vista.dispose();
+            PrincipalBo ModeloPrincipal = new PrincipalBo();
+            Principal ventanaprincipal = new Principal();
+            ventanaprincipal.setVisible(true);
+            new PrincipalController(ventanaprincipal, ModeloPrincipal);
         }
     }
 

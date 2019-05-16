@@ -51,6 +51,7 @@ public class Pdf extends javax.swing.JFrame {
         btneliminar = new rojeru_san.RSButtonRiple();
         btnmodificar = new rojeru_san.RSButtonRiple();
         btncancelar = new rojeru_san.RSButtonRiple();
+        btnback = new rojeru_san.RSButtonRiple();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -129,6 +130,9 @@ public class Pdf extends javax.swing.JFrame {
         btncancelar.setText("Cancelar");
         jPanel1.add(btncancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 90, -1));
 
+        btnback.setText("Atras");
+        jPanel1.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 74, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -181,6 +185,7 @@ public class Pdf extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public rojeru_san.RSButtonRiple btnback;
     public rojeru_san.RSButtonRiple btncancelar;
     public rojeru_san.RSButtonRiple btneliminar;
     public rojeru_san.RSButtonRiple btnguardar;
