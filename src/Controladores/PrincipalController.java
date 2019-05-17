@@ -1,6 +1,7 @@
 package Controladores;
 
 import Conexion.Conexion;
+import Modelos.FacturacionBo;
 import Modelos.PdfBo;
 import Modelos.PrincipalBo;
 import Modelos.PrincipalVo;
@@ -94,7 +95,6 @@ public final class PrincipalController implements ActionListener {
                     botones(true, true, true, true, true, true);
                     break;
                 default:
-                // code block
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error, No Se Pudo Filtrar: " + e);
@@ -172,9 +172,10 @@ public final class PrincipalController implements ActionListener {
             new PdfController(Modelopdf, Vistapdf);
         } else if (e.getSource() == Vista.MenuFacturacion) {
             Vista.dispose();
+            FacturacionBo Modelo = new FacturacionBo();
             Facturacion VistaArticulo = new Facturacion();
             VistaArticulo.setVisible(true);
-            new Facturacioncontroller(VistaArticulo);
+            new Facturacioncontroller(VistaArticulo,Modelo);
         } else if (e.getSource() == Vista.MenuProveedores) {
             Vista.dispose();
             ProveedoresBo Modelo = new ProveedoresBo();
@@ -183,19 +184,4 @@ public final class PrincipalController implements ActionListener {
             new ProveedoresController(Modelo, VistaProveedor);
         }
     }
-//
-//    private void MenuFacturacionMouseClicked(java.awt.event.MouseEvent evt) {
-//        Vista.dispose();
-//        Facturacion VistaArticulo = new Facturacion();
-//        VistaArticulo.setVisible(true);
-//        new Facturacioncontroller(VistaArticulo);
-//    }
-//
-//    private void MenuProveedoresMouseClicked(java.awt.event.MouseEvent evt) {
-//        Vista.dispose();
-//        ProveedoresBo Modelo = new ProveedoresBo();
-//        Proveedores VistaProveedor = new Proveedores();
-//        VistaProveedor.setVisible(true);
-//        new ProveedoresController(Modelo, VistaProveedor);
-//    }
 }

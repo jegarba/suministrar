@@ -54,6 +54,12 @@ public class Facturacion extends javax.swing.JFrame {
         lblvalor = new javax.swing.JLabel();
         FacturarArticulo = new rojeru_san.RSButtonRiple();
         rSPanelImage1 = new rojerusan.RSPanelImage();
+        panelArticulos = new javax.swing.JPanel();
+        TxtNombreArticulo = new rojeru_san.RSMTextFull();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        TxtPrecioPrecio = new rojeru_san.RSMTextFull();
+        GuardarArticulo = new rojeru_san.RSButtonRiple();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -108,7 +114,7 @@ public class Facturacion extends javax.swing.JFrame {
         TablaArticulos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(TablaArticulos);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 620, 180));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 610, 180));
 
         AtrasUsu.setText("Atras");
         jPanel2.add(AtrasUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 77, -1));
@@ -116,14 +122,14 @@ public class Facturacion extends javax.swing.JFrame {
         TextIdUsu.setBordeColorNoFocus(new java.awt.Color(153, 153, 153));
         TextIdUsu.setModoMaterial(true);
         TextIdUsu.setPlaceholder("Buscar Articulos Por Nombre...");
-        jPanel2.add(TextIdUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+        jPanel2.add(TextIdUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, -1, -1));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/buscar.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, -1, 32));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, -1, 32));
 
         agregarAR.setText("Facturar");
-        jPanel2.add(agregarAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 170, 40));
+        jPanel2.add(agregarAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 170, 40));
 
         PanelReporte.setBackground(new java.awt.Color(255, 255, 255));
         PanelReporte.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 112, 197), 1, true));
@@ -215,6 +221,63 @@ public class Facturacion extends javax.swing.JFrame {
 
         jPanel2.add(rSPanelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
 
+        panelArticulos.setBackground(new java.awt.Color(255, 255, 255));
+        panelArticulos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 112, 197), 1, true));
+        panelArticulos.setForeground(new java.awt.Color(255, 255, 255));
+
+        TxtNombreArticulo.setBordeColorNoFocus(new java.awt.Color(153, 153, 153));
+        TxtNombreArticulo.setModoMaterial(true);
+        TxtNombreArticulo.setPlaceholder("Ingrese el Nombre Del Articulo...");
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/delivery-cart.png"))); // NOI18N
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Precio.png"))); // NOI18N
+
+        TxtPrecioPrecio.setBordeColorNoFocus(new java.awt.Color(153, 153, 153));
+        TxtPrecioPrecio.setModoMaterial(true);
+        TxtPrecioPrecio.setPlaceholder("Precio Del Articulo...");
+
+        GuardarArticulo.setText("Agregar");
+        GuardarArticulo.setFont(new java.awt.Font("Roboto Bold", 1, 12)); // NOI18N
+
+        javax.swing.GroupLayout panelArticulosLayout = new javax.swing.GroupLayout(panelArticulos);
+        panelArticulos.setLayout(panelArticulosLayout);
+        panelArticulosLayout.setHorizontalGroup(
+            panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelArticulosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(GuardarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelArticulosLayout.createSequentialGroup()
+                        .addGroup(panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TxtNombreArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtPrecioPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        panelArticulosLayout.setVerticalGroup(
+            panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelArticulosLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(TxtNombreArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(14, 14, 14)
+                .addGroup(panelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(TxtPrecioPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(GuardarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(panelArticulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 320, 210));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -269,6 +332,7 @@ public class Facturacion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public rojeru_san.RSButtonRiple AtrasUsu;
     public rojeru_san.RSButtonRiple FacturarArticulo;
+    public rojeru_san.RSButtonRiple GuardarArticulo;
     private javax.swing.JPanel PanelReporte;
     public javax.swing.JTable TablaArticulos;
     public rojeru_san.RSMTextFull TextIdUsu;
@@ -276,11 +340,15 @@ public class Facturacion extends javax.swing.JFrame {
     public rojeru_san.RSMTextFull TxtFacturaNit;
     public rojeru_san.RSMTextFull TxtFacturaNombre;
     public rojeru_san.RSMTextFull TxtFacturaTelefono;
+    public rojeru_san.RSMTextFull TxtNombreArticulo;
+    public rojeru_san.RSMTextFull TxtPrecioPrecio;
     public rojeru_san.RSButtonRiple agregarAR;
     public javax.swing.JButton btnmodipre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -290,6 +358,7 @@ public class Facturacion extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     public javax.swing.JLabel lblvalor;
+    private javax.swing.JPanel panelArticulos;
     public javax.swing.JButton quitar;
     private rojerusan.RSPanelImage rSPanelImage1;
     public javax.swing.JTable tablaventa;

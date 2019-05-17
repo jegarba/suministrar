@@ -1,7 +1,11 @@
 package Modelos;
-import java.math.BigDecimal;
 
- 
+import Conexion.Conexion;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 public class FacturacionBo {
 
     /**
@@ -194,5 +198,28 @@ public class FacturacionBo {
         }
 
         return result;
+    }
+
+    public FacturacionVo GuardarArticulos(String Articulo, int Precio) {
+
+        try {
+            Conexion C = new Conexion();
+            String CosultaInsertar = "CALL Articulos (1,0,0,3,'" + Articulo + "','" + Precio + "',1); ";
+            Statement Puente = C.Conectar().createStatement();
+            int ColAfectadas = Puente.executeUpdate(CosultaInsertar);
+
+            if (ColAfectadas > 0) {
+                JOptionPane.showMessageDialog(null, "Registro Guardado Correctamente...!!!");
+
+            } else {
+                JOptionPane.showMessageDialog(null, "El Registro No Se Pudo Guardar...!!!");
+
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Se Produjo El Siguiente Error: " + e);
+
+        }
+        return null;
+
     }
 }

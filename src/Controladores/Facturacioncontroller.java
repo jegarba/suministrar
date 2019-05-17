@@ -32,6 +32,7 @@ import vistas.Principal;
 public final class Facturacioncontroller implements ActionListener {
 
     Facturacion Vista;
+    FacturacionBo ModeloBo;
     private InputStream formato;
     private String nombre, precio;
 
@@ -47,7 +48,7 @@ public final class Facturacioncontroller implements ActionListener {
             PrincipalBo ModeloPrincipal = new PrincipalBo();
             Principal ventanaprincipal = new Principal();
             ventanaprincipal.setVisible(true);
-            new PrincipalController(ventanaprincipal,ModeloPrincipal);
+            new PrincipalController(ventanaprincipal, ModeloPrincipal);
         } else if ("DistibuidoraNacional".equals(opcion.toString())) {
             this.formato = (cl.getResourceAsStream("reportes/distribuidoranacional.jasper"));
             //JOptionPane.showMessageDialog(null, formato);
@@ -173,8 +174,9 @@ public final class Facturacioncontroller implements ActionListener {
         }
     }
 
-    public Facturacioncontroller(Facturacion Vista) {
+    public Facturacioncontroller(Facturacion Vista, FacturacionBo ModeloBo) {
         this.Vista = Vista;
+        this.ModeloBo = ModeloBo;
         iniciar();
 
         this.Vista.AtrasUsu.addActionListener(this);
@@ -182,7 +184,7 @@ public final class Facturacioncontroller implements ActionListener {
         this.Vista.quitar.addActionListener(this);
         this.Vista.FacturarArticulo.addActionListener(this);
         this.Vista.btnmodipre.addActionListener(this);
-
+        this.Vista.GuardarArticulo.addActionListener(this);
         MostrarTabla();
 
         Vista.TablaArticulos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -229,7 +231,7 @@ public final class Facturacioncontroller implements ActionListener {
             PrincipalBo ModeloPrincipal = new PrincipalBo();
             Principal ventanaprincipal = new Principal();
             ventanaprincipal.setVisible(true);
-            new PrincipalController(ventanaprincipal,ModeloPrincipal);
+            new PrincipalController(ventanaprincipal, ModeloPrincipal);
         } else if (e.getSource() == Vista.agregarAR) {
             String cantidad = JOptionPane.showInputDialog(null, "Ingresa la cantidad a facturar", "Cantidad de articulos", JOptionPane.QUESTION_MESSAGE);
             if ("".equals(cantidad)) {
@@ -279,6 +281,14 @@ public final class Facturacioncontroller implements ActionListener {
             } else {
                 JOptionPane.showMessageDialog(null, "Debe Selecionar el Producto Al Que Quiere Agregar Un Nuevo Costo.");
             }
+        } else if (e.getSource() == Vista.GuardarArticulo) {
+            int Precio = Integer.parseInt(Vista.TxtPrecioPrecio.getText());
+            String Articulo = Vista.TxtNombreArticulo.getText();
+
+            FacturacionVo Respuesta = ModeloBo.GuardarArticulos(Articulo, Precio);
+            MostrarTabla();
+            Vista.TxtNombreArticulo.setText("");
+            Vista.TxtPrecioPrecio.setText("");
         }
     }
 
